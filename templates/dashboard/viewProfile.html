@@ -1,0 +1,186 @@
+{% extends 'layouts/layout.html' %}
+{% block body %}
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <div id="pcoded" class="pcoded">
+                <div class="pcoded-overlay-box"></div>
+                <div class="pcoded-container navbar-wrapper">
+                    <div id="pcoded" class="pcoded">
+                        <div class="pcoded-overlay-box"></div>
+                        <div class="pcoded-container navbar-wrapper">
+                
+                            <nav class="navbar header-navbar pcoded-header">
+                                <div class="navbar-wrapper">
+                
+                                    <div class="navbar-logo">
+                                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                                            <i class="ti-menu"></i>
+                                        </a>
+                                        <a class="mobile-search morphsearch-search" href="#">
+                                            <i class="ti-search"></i>
+                                        </a>
+                                        <a href="index.html">
+                                            <img class="img-fluid" src="{{url_for('static',filename='images/logo.png')}}" alt="Theme-Logo" />
+                                        </a>
+                                        <a class="mobile-options">
+                                            <i class="ti-more"></i>
+                                        </a>
+                                    </div>
+                
+                                                {% include 'layouts/sidebar.html' %}
+            <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-header start -->
+                                    <div class="page-header card">
+                                        <div class="row align-items-end">
+                                            <div class="col-lg-8">
+                                                <div class="page-header-title">
+                                                    <i class="icofont icofont-file-code bg-c-blue"></i>
+                                                    <div class="d-inline">
+                                                        <h4>View Candidate Profile</h4>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                          </div>
+                                        </div>
+                                    </div>
+                                    <!-- Page-header end -->
+
+                                   <!-- Page-body start -->
+                                   <div class="page-body">
+                                    <!-- Row start -->
+                                    <div class="row">
+                                        <!-- Multiple Open Accordion start -->
+                                        <div class="col-lg-10">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5 class="card-header-text">{{candidate.name}} {{candidate.surname}}</h5>
+                                                </div>
+                                                <div class="card-block accordion-block">
+                                                    <div id="accordion" role="tablist" aria-multiselectable="true">
+                                                        <div class="accordion-panel">
+                                                            <div class="accordion-heading" role="tab" id="headingOne">
+                                                                <h3 class="card-title accordion-title">
+                                                                    <a class="accordion-msg" data-toggle="collapse"
+                                                                    data-parent="#accordion" href="#collapseOne"
+                                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                                Qualifications
+                                                                </a>
+                                                            </h3>
+                                                        </div>
+                                                        <div id="collapseOne" class="panel-collapse collapse in"
+                                                        role="tabpanel" aria-labelledby="headingOne">
+                                                        <div class="accordion-content accordion-desc">
+                                                            <p>
+                                                            {{ candidate.qualification}}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    
+                                                <div class="accordion-panel">
+                                                    <div class="accordion-heading" role="tab" id="headingTwo">
+                                                        <h3 class="card-title accordion-title">
+                                                            <a class="accordion-msg" data-toggle="collapse"
+                                                            data-parent="#accordion" href="#collapseTwo"
+                                                            aria-expanded="false"
+                                                            aria-controls="collapseTwo">
+                                                            Experience
+                                                        </a>
+                                                    </h3>
+                                                </div>
+                                                <div id="collapseTwo" class="panel-collapse collapse"
+                                                role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="accordion-content accordion-desc">
+                                                    <p>
+                                                     {{ candidate.experience}}   
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-panel">
+                                            <div class="accordion-heading" role="tab" id="headingFour">
+                                                <h3 class="card-title accordion-title">
+                                                    <a class="accordion-msg" data-toggle="collapse"
+                                                    data-parent="#accordion" href="#collapseFour"
+                                                    aria-expanded="true" aria-controls="collapseFour">
+                                                Job Title: {{candidate.job}}
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in"
+                                        role="tabpanel" aria-labelledby="headingFour">
+                                        <div class="accordion-content accordion-desc">
+                                            <p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="accordion-panel">
+                                <div class="accordion-heading" role="tab" id="headingFour">
+                                    <h3 class="card-title accordion-title">
+                                        <a class="accordion-msg" data-toggle="collapse"
+                                        data-parent="#accordion" href="#collapseFour"
+                                        aria-expanded="true" aria-controls="collapseFour">
+                                    Phone Number: {{candidate.phone}}
+                                    </a>
+                                </h3>
+                            </div>
+                       
+            </div>
+            <div class="accordion-panel">
+                <div class="accordion-heading" role="tab" id="headingFour">
+                    <h3 class="card-title accordion-title">
+                        <a class="accordion-msg" data-toggle="collapse"
+                        data-parent="#accordion" href="#collapseFour"
+                        aria-expanded="true" aria-controls="collapseFour">
+                    Company: {{candidate.company}}
+                    </a>
+                </h3>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in"
+            role="tabpanel" aria-labelledby="headingFour">
+            <div class="accordion-content accordion-desc">
+                <p>
+                </p>
+            </div>
+        </div>
+    </div>
+                    <div class="accordion-panel">
+                        <div class="accordion-heading" role="tab" id="headingFour">
+                            <h3 class="card-title accordion-title">
+                                <a class="accordion-msg" data-toggle="collapse"
+                                data-parent="#accordion" href="#collapseFour"
+                                aria-expanded="true" aria-controls="collapseFour">
+                            Email: {{candidate.email}}
+                            </a>
+                        </h3>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in"
+                    role="tabpanel" aria-labelledby="headingFour">
+                    <div class="accordion-content accordion-desc">
+                        <p>
+                            <label>Salary:  </label>  <label>  $500 USD</label>
+                            <label>Deadline:  </label>  <label>  12/11/21</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+                </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Multiple Open Accordion ends -->
+            </div>
+        <!-- Row end -->
+       
+            <!-- Page-body end -->
+        {% endblock %}

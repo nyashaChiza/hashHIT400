@@ -1,0 +1,209 @@
+{% extends 'layouts/layout.html' %}
+{% block body %} 
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="index.html">
+                            <img class="img-fluid" src="{{url_for('static',filename='images/logo.png')}}" alt="Theme-Logo" />
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+                    
+                {% include 'layouts/sidebar.html' %}
+                <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-blue f-w-600">Total Jobs</span>
+                                                        <h4>{{totalJobs}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-pink f-w-600">Closed Jobs</span>
+                                                        <h4>{{closedJobs}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                       
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-green f-w-600">Open Jobs</span>
+                                                        <h4>{{openJobs}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-yellow f-w-600">Candidates</span>
+                                                        <h4>{{totalCandidates}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- Statestics Start -->
+                                            <div class="col-md-12 col-xl-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h4 >Candidate Management</h4>
+                                                        <div class="card-header-left ">
+                                                        </div>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="icofont icofont-simple-left "></i></li>
+                                                                <li><i class="icofont icofont-maximize full-card"></i></li>
+                                                                <li><i class="icofont icofont-minus minimize-card"></i></li>
+                                                                <li><i class="icofont icofont-refresh reload-card"></i></li>
+                                                                <li><i class="icofont icofont-error close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    
+ <!-- Hover table card start -->
+ <div class="card col-md-11 mx-auto">
+    <div class="card-block table-border-style ">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-light">
+                        <th>•</th>
+                        <th>Candidates Name</th>
+                        <th>Job Title</th>
+                        <th>Company Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in candidates %}
+                    <tr class="table-light">
+                        <th scope="row">1</th>
+                        <td>{{ item.initial }} {{ item.name }} {{ item.surname }}</td>
+                        <td>{{ item.job }}</td>
+                        <td>{{ item.company }}</td>
+
+                        <td> <a href="{{ url_for('manage',option='viewCandidate',id= item.id )}}"><button class="btn btn-success btn-outline-success"><i class="icofont icofont-check-circled"></i>View Profile</button></a>
+                               </td>
+                    </tr>
+                    {% endfor %}
+                                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Hover table card end -->
+<!-- Contextual classes table starts -->
+<!-- Contextual classes table ends -->
+
+                                                                
+                                            <!-- Email Sent End -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="styleSelector">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+{% endblock %}
+       

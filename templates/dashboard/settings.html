@@ -1,0 +1,111 @@
+{% extends 'layouts/layout.html' %}
+{% block body %}
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+            <div id="pcoded" class="pcoded">
+                <div class="pcoded-overlay-box"></div>
+                <div class="pcoded-container navbar-wrapper">
+        
+                    <nav class="navbar header-navbar pcoded-header">
+                        <div class="navbar-wrapper">
+        
+                            <div class="navbar-logo">
+                                <a class="mobile-menu" id="mobile-collapse" href="#!">
+                                    <i class="ti-menu"></i>
+                                </a>
+                                <a class="mobile-search morphsearch-search" href="#">
+                                    <i class="ti-search"></i>
+                                </a>
+                                <a href="index.html">
+                                    <img class="img-fluid" src="{{url_for('static',filename='images/logo.png')}}" alt="Theme-Logo" />
+                                </a>
+                                <a class="mobile-options">
+                                    <i class="ti-more"></i>
+                                </a>
+                            </div>
+        
+
+            {% include 'layouts/sidebar.html' %}
+            <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <!-- Page-header start -->
+                                    <div class="page-header card">
+                                        <div class="row align-items-end">
+                                            <div class="col-lg-8">
+                                                <div class="page-header-title">
+                                                    <i class="icofont icofont-file-code bg-c-blue"></i>
+                                                    <div class="d-inline">
+                                                        <h4>Settings</h4>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                          </div>
+                                        </div>
+                                    </div>
+                                    <!-- Page-header end -->
+
+                                    <!-- Page body start -->
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <!-- Basic Form Inputs card start -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h3>Enter The Following</h3>
+
+                                                        <div class="card-header-right"><i
+                                                            class="icofont icofont-spinner-alt-5"></i></div>
+
+                                                            <div class="card-header-right">
+                                                                <i class="icofont icofont-spinner-alt-5"></i>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <h4 class="sub-title"></h4>
+                                                            <form method="post" action="{{ url_for('settings') }}">
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Change Email</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="email" value = '{{ job.get("email")}}' name='email' class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Issuer</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" value = '{{ job.get("issuer")}}' name='issuer' class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Validation Period</label>
+                                                                    <div class="col-sm-10">
+                                                                        <input type="text" value = '{{ job.get("validation")}}' name='validation' class="form-control">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-sm-2 col-form-label">Select Template</label>
+                                                                    <div class="col-sm-10">
+                                                                        <select  class="form-control" name = 'template'>
+                                                                            <option disabled value="opt1">Select One Value Only</option>
+                                                                           
+                                                                            <option value="template1">template 1</option>
+                                                                            <option value="template2">template 2</option>
+                                                                            <option value="template3">template 3</option>
+                                                                            
+                                                                                                              </select>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                                <br >
+                                                                </form>
+                                                                <br >
+                                                                
+{% endblock %}

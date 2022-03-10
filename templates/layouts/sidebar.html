@@ -1,0 +1,105 @@
+<div class="navbar-container container-fluid">
+    <ul class="nav-right">
+        {% if notify != None  %}
+        <li class="header-notification">
+            <a href="#!">
+                <i class="ti-bell"></i>
+                <span class="badge bg-c-pink"></span>
+            </a>
+            <ul class="show-notification">
+                <li>
+                    <h6>Notifications</h6>
+                    <label class="label label-danger">New</label>
+                </li>
+                {% for item in notify %}
+                {% if item.notify == 'notifyManager' %}
+                <li>
+                    <div class="media">
+                        <div class="media-body">
+                           <a href="{{ url_for('manageJobs') }}">
+                            <h5 class="notification-user">New Job Requisition</h5>
+                            <p class="notification-msg">{{item.title}} • {{item.company}}</p>
+                            </a>
+                        </div>
+                    </div>
+                </li> 
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>    
+        {% endif %}    
+        <li class="user-profile float-right header-notification">
+            <a href="#!">
+                <i class="ti-layout-column3-alt"></i>
+                <span>{{ user.get('initial')}} {{ user.get('name')}}</span>
+                <i class="ti-angle-down"></i>
+            </a>
+            <ul class="show-notification profile-notification">
+                                                    <li>
+                    <a href="{{ url_for('logOut')}}">
+                        <i class="ti-layout-sidebar-left"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+</nav>
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <nav class="pcoded-navbar">
+            <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+            <div class="pcoded-inner-navbar main-menu">
+                <div class="">
+                    
+                               </div>
+                
+                <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Manager Portal</div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="active">
+                        <a href="{{url_for('dashboard')}}">
+                            <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.dash.main">Home</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('verifyCertificate')}}">
+                            <span class="pcoded-micon"><i class="ti-layers"></i><b>AJ</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Verify Certificate</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('certificates',opt='new')}}">
+                            <span class="pcoded-micon"><i class="ti-layers"></i><b>AC</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Create New Certificate</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('certificates',opt='re')}}">
+                            <span class="pcoded-micon"><i class="ti-layers"></i><b>MJ</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Renew Certificate</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('mailCertificate')}}">
+                            <span class="pcoded-micon"><i class="ti-layers"></i><b>VC</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Mail Certificate</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('settings')}}">
+                            <span class="pcoded-micon"><i class="ti-layers"></i><b>VC</b></span>
+                            <span class="pcoded-mtext" data-i18n="nav.form-components.main">Settings</span>
+                            <span class="pcoded-mcaret"></span>
+                        </a>
+                    </li>
+                    
+                                   </ul>
+            </div>
+        </nav>

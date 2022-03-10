@@ -1,0 +1,202 @@
+{% extends 'layouts/layout.html' %}
+{% block body %} 
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a class="mobile-search morphsearch-search" href="#">
+                            <i class="ti-search"></i>
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid" src="{{url_for('static',filename='images/logo.png')}}" alt="Theme-Logo" />
+                        </a>
+                        <a class="mobile-options">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+
+                                    {% include 'layouts/sidebar.html' %}
+                <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-blue f-w-600">Total Certificates</span>
+                                                        <h4>{{total}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-pink f-w-600">Expired Certificates</span>
+                                                        <h4>{{expired}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-warning-alt bg-c-green card1-icon"></i>
+                                                        <span class="text-c-green f-w-600">Active Certificates</span>
+                                                        <h4>{{active}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <!-- card1 start -->
+                                            <div class="col-md-6 col-xl-3">
+                                                <div class="card widget-card-1">
+                                                    <div class="card-block-small">
+                                                        <i class="icofont icofont-pie-chart bg-c-blue card1-icon"></i>
+                                                        <span class="text-c-yellow f-w-600">Users</span>
+                                                        <h4>{{users}}</h4>
+                                                        <div>
+                                                            <span class="f-left m-t-10 text-muted">
+                                                                <i class="text-c-yellow f-16 icofont icofont-refresh m-r-10"></i>Updated recently
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- card1 end -->
+                                            <div class="page-header card col-md-12 mx-auto">
+                                                <div class="row align-items-end">
+                                                    <div class="col-lg-8">
+                                                        <div class="page-header-title">
+                                                            <i class="icofont icofont-layout bg-c-blue"></i>
+                                                            <div class="d-inline">
+                                                                <h4>All Certificates </h4>
+                                                                 </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="page-header-breadcrumb">
+                                                            <ul class="breadcrumb-title">
+                                                                <li class="breadcrumb-item">
+                                                                    <a href="#">
+                                                                        <i class="icofont icofont-home"></i>
+                                                                    </a>
+                                                                </li>
+                                                                                                                           </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Page-header end -->
+                                            </div>
+                                            <!-- Basic table card start -->
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5></h5>
+                                             <div class="card-header-right">    <ul class="list-unstyled card-option">        <li><i class="icofont icofont-simple-left "></i></li>        <li><i class="icofont icofont-maximize full-card"></i></li>        <li><i class="icofont icofont-minus minimize-card"></i></li>        <li><i class="icofont icofont-refresh reload-card"></i></li>        <li><i class="icofont icofont-error close-card"></i></li>    </ul></div>
+                                        </div>
+                                        <div class="card-block table-border-style">
+                                            <div class="table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        
+                                                        <tr class="bg-info rounded-3">
+                                                            <th>#</th>
+                                                            
+                                                            <th>Awarded To</th>
+                                                            <th>Issuer</th>
+                                                            <th>Expiry Date</th>
+                                                            <th>Download</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for item in cert %}
+                                                        <th scope="row">:</th>
+                                                        <td>{{item.awarded_to}}</td>
+                                                        <td>{{item.issuer}}</td>
+                                                        <td>{{item.expiry}}</td>
+                                                        <td><a href="{{url_for('download',name=item.awarded_to+'.docx')}}"><i class="ti-download"></i></td>
+                                                    </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Basic table card end -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+{% endblock %}
+       
